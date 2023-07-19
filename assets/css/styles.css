@@ -1,0 +1,284 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share:wght@400;500;600&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, ul, p {
+  margin: 0;
+}
+
+ul {
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
+}
+
+body {
+  --text-color: #2d2828;
+  --back-color: white;
+  margin: 0;
+}
+body.dark-theme {
+  --text-color: white;
+  --back-color: #2d2828;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Share;
+  color: var(--text-color);
+  background-color: var(--back-color);
+  transition: 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  top: -80px;
+  padding-left: 30px;
+  padding-right: 35px;
+  transition: 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+body header .download, body header .change-theme {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+body header.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--back-color);
+  z-index: 5;
+}
+@media screen and (min-width: 968px) {
+  body header {
+    display: none;
+  }
+}
+@media screen and (min-width: 968px) {
+  body {
+    margin: 3rem 0;
+  }
+}
+
+main, .scale-cv {
+  margin: 0 1rem;
+  max-width: 968px;
+}
+@media screen and (min-width: 968px) {
+  main, .scale-cv {
+    margin: auto;
+    width: calc(100% - 3rem);
+  }
+}
+@media screen and (min-width: 968px) {
+  main .resume, .scale-cv .resume {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 0 9px rgba(8, 7, 7, 0.104);
+  }
+}
+main .resume section, .scale-cv .resume section {
+  padding: 1.5rem;
+}
+main .resume section h3, .scale-cv .resume section h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+main .resume #me, .scale-cv .resume #me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+main .resume #me .icons, .scale-cv .resume #me .icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .resume #me .avatar, .scale-cv .resume #me .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+main .resume #me .download, main .resume #me .change-theme, .scale-cv .resume #me .download, .scale-cv .resume #me .change-theme {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+main .resume #me .name, .scale-cv .resume #me .name {
+  font-family: Yellowtail;
+  font-weight: 400;
+  font-size: 33px;
+}
+main .resume #me .profession, .scale-cv .resume #me .profession {
+  font-weight: 500;
+  font-size: 20px;
+}
+@media screen and (max-width: 968px) {
+  main .resume #me, .scale-cv .resume #me {
+    margin-top: -70px;
+  }
+  main .resume #me .icons, .scale-cv .resume #me .icons {
+    display: none;
+  }
+}
+main .resume #contacts ul, .scale-cv .resume #contacts ul {
+  font-size: 0.8rem;
+  list-style-type: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+main .resume #contacts ul li, .scale-cv .resume #contacts ul li {
+  margin-bottom: 1rem;
+}
+main .resume #contacts ul li i, .scale-cv .resume #contacts ul li i {
+  margin-right: 1rem;
+}
+main .resume #social ul, .scale-cv .resume #social ul {
+  font-size: 0.8rem;
+  list-style-type: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+main .resume #social ul li, .scale-cv .resume #social ul li {
+  margin-bottom: 1rem;
+}
+main .resume #social ul li i, .scale-cv .resume #social ul li i {
+  margin-right: 1rem;
+}
+main .resume #aboutme p, .scale-cv .resume #aboutme p {
+  text-align: center;
+}
+main .resume #education, .scale-cv .resume #education {
+  display: grid;
+  gap: 1.5rem;
+}
+main .resume #education .cell, .scale-cv .resume #education .cell {
+  display: flex;
+}
+main .resume #education .cell__progress, .scale-cv .resume #education .cell__progress {
+  width: 16px;
+}
+main .resume #education .cell__progress .top, .scale-cv .resume #education .cell__progress .top {
+  height: 57%;
+  width: 2px;
+  transform: translate(6.5px, 0);
+  background-color: var(--text-color);
+}
+main .resume #education .cell__progress .round, .scale-cv .resume #education .cell__progress .round {
+  width: 15px;
+  height: 15px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
+main .resume #education .cell__progress .bottom, .scale-cv .resume #education .cell__progress .bottom {
+  height: 57%;
+  width: 2px;
+  transform: translate(6.5px, 0);
+  background-color: var(--text-color);
+}
+main .resume #education .cell__text, .scale-cv .resume #education .cell__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+main .resume #skills .skills, .scale-cv .resume #skills .skills {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+main .resume #skills .skills ul li, .scale-cv .resume #skills .skills ul li {
+  margin-bottom: 2rem;
+}
+main .resume #languages ul li, .scale-cv .resume #languages ul li {
+  margin-bottom: 2rem;
+}
+main .resume #projects .projects, .scale-cv .resume #projects .projects {
+  display: grid;
+  gap: 1.5rem;
+  line-height: 1.5rem;
+}
+main .resume #projects .projects p, .scale-cv .resume #projects .projects p {
+  position: relative;
+  text-indent: 20px;
+}
+main .resume #projects .projects p a, .scale-cv .resume #projects .projects p a {
+  text-decoration: underline;
+}
+main .resume #projects .projects p a:hover, .scale-cv .resume #projects .projects p a:hover {
+  font-weight: 600;
+}
+main .resume #projects .projects p:before, .scale-cv .resume #projects .projects p:before {
+  display: block;
+  position: absolute;
+  top: 8px;
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--text-color);
+}
+main .resume #certificates .certificates, .scale-cv .resume #certificates .certificates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+main .resume #certificates .certificates img, .scale-cv .resume #certificates .certificates img {
+  height: 150px;
+}
+
+@media (max-width: 968px) {
+  .scale-cv #me {
+    padding-top: 80px;
+  }
+  .scale-cv #skills {
+    margin-top: 120px;
+  }
+  .scale-cv #certificates {
+    margin-top: 80px;
+  }
+}
+@media screen and (min-width: 968px) {
+  .scale-cv #certificates {
+    margin-top: 353px;
+  }
+  .scale-cv #skills {
+    margin-top: 60px;
+  }
+}
+.scale-cv .download, .scale-cv .change-theme {
+  display: none;
+}
+
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  background-color: var(--container-color-alt);
+  border-radius: 0.4rem;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+}/*# sourceMappingURL=styles.css.map */
